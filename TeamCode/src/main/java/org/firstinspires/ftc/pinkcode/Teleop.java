@@ -12,10 +12,10 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 public class Teleop extends OpMode {
     DcMotor frontLeft, frontRight, backLeft, backRight;
 
-    DcMotorEx gusMotor;
+    //DcMotorEx gusMotor;
     @Override
     public void init() {
-        gusMotor = hardwareMap.get(DcMotorEx.class, "gus");
+        //gusMotor = hardwareMap.get(DcMotorEx.class, "gus");
 
         frontRight = hardwareMap.get(DcMotor.class, "frontR");
         frontLeft = hardwareMap.get(DcMotor.class, "frontL");
@@ -48,12 +48,12 @@ public class Teleop extends OpMode {
             v4 += v4 / 3;
         }
 
-        this.frontLeft.setPower(v1);
+        this.frontLeft.setPower(-v1);
         this.frontRight.setPower(-v2);
         this.backLeft.setPower(v3);
         this.backRight.setPower(-v4);
 
-        if (gusMotor.getCurrentPosition() >= 30) {
+        /* if (gusMotor.getCurrentPosition() >= 30) {
             gusMotor.setPower(-0.1);
         } else if (gusMotor.getCurrentPosition() <= 26) {
             gusMotor.setPower(0.1);
@@ -62,6 +62,6 @@ public class Teleop extends OpMode {
         }
 
         telemetry.addData("Ticks", gusMotor.getCurrentPosition());
-        telemetry.update();
+        telemetry.update(); */
     }
 }
