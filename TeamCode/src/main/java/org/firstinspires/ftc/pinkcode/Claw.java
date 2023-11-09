@@ -2,15 +2,11 @@ package org.firstinspires.ftc.pinkcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.I2cDeviceSynch;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
 @Autonomous
-public class finger extends OpMode{
+public class Claw extends OpMode{
     DcMotor frontRight, frontLeft, backRight, backLeft;
     int distanceTraveled = 0;
     @Override
